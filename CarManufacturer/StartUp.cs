@@ -37,7 +37,8 @@ namespace CarManufacturer
                     
                 int horsePower = int.Parse(tokens[0]);
                 double cubicCapacity = double.Parse(tokens[1], CultureInfo.InvariantCulture);
-                engines.Add(new Engine(horsePower, cubicCapacity));
+                var engine = new Engine(horsePower, cubicCapacity);
+                engines.Add(engine);
             }
             
             List<Car> cars = new List<Car>();
